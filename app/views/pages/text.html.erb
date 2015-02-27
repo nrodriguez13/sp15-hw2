@@ -1,0 +1,7 @@
+<div class="stringify">
+	<% if params[:name].blank? == true and params[:adjective].blank? == true %>
+		<h4><%= "You are nothing!" %></h4> 
+    <% else %>
+      <h4> <%= params[:name] + " is very " + params[:adjective] %></h4>
+    <% end %>
+</div>

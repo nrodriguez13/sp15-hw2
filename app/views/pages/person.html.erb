@@ -1,0 +1,13 @@
+<div class="person">
+	<% if params[:name].blank? == true and params[:age].blank? == true %>
+		<h4><%= "Please provide me with your name and age." %></h4> 
+    <% else %>
+      <h4> <%= "Hi " + params[:name] + ", you're " + params[:age] + " years old." %></h4>
+      <% age = params[:age] %>
+      <% now = Time.now.utc.to_date %>
+	  <h4> <%= "You were born in " + (now.year - age.to_i).to_s + "." %> </h4>
+	  <% name = params[:name] %>
+	  <h4> <%= "You're nickname is " + name[0...4] + ". Haha, that's dumb." %> </h4>
+    <% end %>
+</div>
+
